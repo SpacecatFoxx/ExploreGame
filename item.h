@@ -7,13 +7,14 @@ using std::string;
 class Item {
 	public:
   /*========== Constructors ==========*/
-
+    Item() {};
+    Item(string name, int function, string type, int rarity, string special, int increase, string desc);
   /*========== Functions ==========*/
 
     //Desc: Fills item info
     //Pre:  Unfilled item class
     //Post: Item class filled
-    void makeItem(const string filename);
+    void makeItem(Item listItems[], const int maxItems, const string filename);
 
     //Desc: Gives item name
     //Pre:  Item has name
@@ -27,7 +28,8 @@ class Item {
     int itemFunction; //ATK+ if weapon, ARM+ if armor, HP+ if potion
     string itemType;
     int itemRarity;
-    int itemSpecial; //Additional special effect bonus (ex. AGI+ boots)
+    string itemSpecial; //Additional special effect bonus stat (ex. AGI+ boots)
+    int statUp; //Value of special effect bonus
     string itemDesc;
   
   /*========== Functions ==========*/
