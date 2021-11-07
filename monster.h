@@ -14,7 +14,7 @@ class Monster {
     //Desc: Fills the monster info
     //Pre:  Empty monster info
     //Post: Filled monster info
-    void makeMonster(Monster listMonsters[], const int maxMonsters, const string filename);
+    void makeMonster(Monster listMonsters[], const string filename);
   
     //Desc: Fills the list of drops
     //Pre:  An empty list of drops

@@ -14,7 +14,8 @@ class Item {
     //Desc: Fills item info
     //Pre:  Unfilled item class
     //Post: Item class filled
-    void makeItem(Item listItems[], const int maxItems, const string filename);
+    void makeItem(string name, int function, string type, int rarity,
+                  string special, int statUp, string desc);
 
     //Desc: Gives item name
     //Pre:  Item has name
@@ -29,7 +30,7 @@ class Item {
     string itemType;
     int itemRarity;
     string itemSpecial; //Additional special effect bonus stat (ex. AGI+ boots)
-    int statUp; //Value of special effect bonus
+    int itemStatUp; //Value of special effect bonus
     string itemDesc;
   
   /*========== Functions ==========*/

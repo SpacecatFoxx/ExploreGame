@@ -6,20 +6,31 @@
 #include <string>
 #include <cstdlib>
 
+/* 
+Compiler Executable:
+g++ -Wall -W -s -pedantic-errors 
+*/
+
 using namespace std;
 
 int main() {
-  const int MAX_ITEM = 20;
-  const int MAX_MONSTERS = 10;
-  const int BOSSES = 2;
+//  const int ITEMAX = 20;
+//  const int MAX_MONSTERS = 10;
+//  const int BOSSES = 2;
 
-  Item sixStar[MAX_ITEM];
-  Item fiveStar[MAX_ITEM];
-  Item fourStar[MAX_ITEM];
-  Item threeStar[MAX_ITEM];
-  Monster normalEnemy[MAX_MONSTERS];
-  Monster bossEnemy[BOSSES];
+//  int numSixStar;
+//  int numFiveStar;
+//  int numFourStar;
+//  int numThreeStar;
 
+//  Item sixStar[ITEMAX];
+//  Item fiveStar[ITEMAX];
+//  Item fourStar[ITEMAX];
+//  Item threeStar[ITEMAX];
+//  Monster normalEnemy[MAX_MONSTERS];
+//  Monster bossEnemy[BOSSES];
+
+  
 
 //  p1.printPlayer();
 //  p2.printPlayer();

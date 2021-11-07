@@ -1,3 +1,6 @@
+#ifndef PLAYER_H
+#define PLAYER_H
+
 #include "item.h"
 #include <string>
 
@@ -42,3 +45,5 @@ class Player {
     Item inventory[MAX_ITEMS];
     
 };
+
+#endif
