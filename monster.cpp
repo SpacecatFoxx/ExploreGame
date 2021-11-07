@@ -10,7 +10,7 @@ void Monster::makeMonster(Monster listMonsters[], const string filename) {
 
   ifstream fin;
   fin.open(filename.c_str());
-    if (filename == "monsters/bosses.log") {
+    if (filename == "monster/bosses.log") {
       listMonsters[monsters].isBoss = true;
     } else {
       listMonsters[monsters].isBoss = false;

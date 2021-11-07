@@ -7,7 +7,7 @@
 
 using namespace std;
 
-int fillItems(Item listItems[], const int itemsMax, string filename);
+int fillItems(Item listItems[], const int itemsMax, string filename) {
 
   int numItems = 0;
   string name;
@@ -25,7 +25,7 @@ int fillItems(Item listItems[], const int itemsMax, string filename);
     cout << "File [" << filename << "] not found!" << endl;
   } else {
     fin >> rarity;
-    while (fin >> data) {
+    while (!fin.eof()) {
       fin.ignore();
       getline(fin, name);
       fin >> function;
