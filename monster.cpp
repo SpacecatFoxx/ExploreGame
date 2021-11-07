@@ -12,6 +12,9 @@ void Monster::makeMonster(const string filename) {
 
   ifstream fin;
   fin.open(filename.c_str());
+  if (!fin) {
+    cout << "File not found!" << endl;
+  }
   if (filename == "monster/bosses.log") {
     isBoss = true;
   } else {
@@ -19,7 +22,8 @@ void Monster::makeMonster(const string filename) {
   }
   getline(fin, monsterName);
   getline(fin, bossTitle);
-  getline(fin, monsterType);
+  //getline(fin, monsterType);
+  monsterType = "testVal";
   fin >> monsterMaxHP;
   monsterHP = monsterMaxHP;
   fin >> monsterAGI;
@@ -44,8 +48,7 @@ void Monster::fillDrops() {
   int statUp;
   string desc;
 
-  //string monsterFile = addStrings("item/", monsterType, ".log");
-  string monsterFile = addStrings("A", "B", "C");
+  string monsterFile = addStrings("item/", monsterType, ".log");
   cout << monsterFile << endl;
   filename = "item/Undead.log";
   if (monsterFile == filename) {cout << "yay!" << endl;}

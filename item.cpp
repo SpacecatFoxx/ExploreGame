@@ -50,3 +50,35 @@ void Item::printItem() const {
   cout << itemDesc << endl;
   return;
 }
+
+int fillItems(Item listItems[], const int itemsMax, const string filename) {
+
+  int numItems = 0;
+  int rarity;
+
+  string data;
+  ifstream fin;
+  fin.open(filename.c_str());
+
+  if (!fin) { //If given file is not found, tell user, otherwise fill information
+    cout << "File [" << filename << "] not found!" << endl;
+  } else {
+    fin >> rarity;
+    while (fin >> data) {
+      fin.ignore();
+      getline(fin, listItems[numItems].itemName);
+      fin >> listItems[numItems].itemFunction;
+      fin.ignore();
+      getline(fin, listItems[numItems].itemType);
+      fin >> listItems[numItems].itemSpecial;
+      fin >> listItems[numItems].itemStatUp;
+      fin.ignore();
+      getline(fin, listItems[numItems].itemDesc);
+      
+      //listItems[numItems].makeItem(name, function, type, rarity, special, statUp, desc);
+      numItems++;
+    }
+  }
+  fin.close();
+  return numItems;
+}

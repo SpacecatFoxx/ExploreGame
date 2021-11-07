@@ -26,6 +26,11 @@ class Item {
     //Pre:  Filled Item class
     //Post: Item content printed to console
     void printItem() const;
+    
+    //Desc: Sends item information from file to Item class
+    //Pre:  Input file and a list of items
+    //Post: Item information added to item list and number of items returned as int
+    friend int fillItems(Item listItems[], const int itemsMax, const string filename);
 
 
   private:
