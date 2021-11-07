@@ -14,17 +14,24 @@ class Monster {
     //Desc: Fills the monster info
     //Pre:  Empty monster info
     //Post: Filled monster info
-    void makeMonster(Monster listMonsters[], const string filename);
+    void makeMonster(const string filename);
   
     //Desc: Fills the list of drops
     //Pre:  An empty list of drops
     //Post: Fills list of drops
     void fillDrops();
+    
+    //Desc: Completely prints a monster's stats and drops. 
+    //      Used for testing for proper file input
+    //Pre:  A filled Monster class
+    //Post: Prints out monster's stats and items to console
+    void fullPrint() const;
 
   private:
   /*========== Variables ==========*/
     bool isBoss;
     string monsterName;
+    string bossTitle;
     string monsterType;
     int monsterHP;
     int monsterMaxHP;

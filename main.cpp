@@ -1,6 +1,6 @@
-#include "player.h"
-#include "item.h"
-#include "monster.h"
+#include "headers/player.h"
+#include "headers/item.h"
+#include "headers/monster.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -30,7 +30,9 @@ int main() {
 //  Monster normalEnemy[MAX_MONSTERS];
 //  Monster bossEnemy[BOSSES];
 
-  
+  Monster testMonster[1];
+  testMonster[0].makeMonster("monster/monsters.log");
+  testMonster[0].fullPrint();  
 
 //  p1.printPlayer();
 //  p2.printPlayer();

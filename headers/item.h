@@ -21,6 +21,11 @@ class Item {
     //Pre:  Item has name
     //Post: Name returned as string
     string getName() const {return itemName;}
+    
+    //Desc: Prints all item details to console
+    //Pre:  Filled Item class
+    //Post: Item content printed to console
+    void printItem() const;
 
 
   private:
