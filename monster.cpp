@@ -9,6 +9,7 @@ using namespace std;
 
 void Monster::makeMonster(const string filename) {
   int monsters = 0;
+  string data;
 
   ifstream fin;
   fin.open(filename.c_str());
@@ -20,10 +21,9 @@ void Monster::makeMonster(const string filename) {
   } else {
     isBoss = false;
   }
-  getline(fin, monsterName);
+  fin >> monsterName;
   getline(fin, bossTitle);
-  //getline(fin, monsterType);
-  monsterType = "testVal";
+  fin >> monsterType; //Problem child!! addStrings() won't work with getline()
   fin >> monsterMaxHP;
   monsterHP = monsterMaxHP;
   fin >> monsterAGI;
@@ -48,15 +48,12 @@ void Monster::fillDrops() {
   int statUp;
   string desc;
 
-  string monsterFile = addStrings("item/", monsterType, ".log");
-  cout << monsterFile << endl;
-  filename = "item/Undead.log";
   if (monsterFile == filename) {cout << "yay!" << endl;}
   else {cout << "damn" << endl;}
   //If not boss, use monster type for drops, if boss use boss name
-//  if (!isBoss) {filename = "item/"+monsterType+".log";} 
-//  else {filename = "item/"+monsterName+".log";}
-  cout << filename << endl;
+  if (!isBoss) {filename = "item/"+monsterType+".log";} 
+  else {filename = "item/"+monsterName+".log";}
+
   fin.open(filename.c_str());
   if (!fin) {
     cout << "File not found!" << endl;
