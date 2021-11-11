@@ -1,40 +1,40 @@
 ==========
-Rusty Sword
+Rusty_Sword
 5
 Weapon
 1
 None
 0
-A rusted, battered sword, probably from an unfortunate adventurer who came before.
+A_rusted,_battered_sword,_probably_from_an_unfortunate_adventurer_who_came_before.
 ==========
-Dented Shield
+Dented_Shield
 6
-Armor (Offhand)
+Armor_(Offhand)
 1
 None
 0
-There's so many dents in this thing that it's questionable if it'll even work...
+There's_so_many_dents_in_this_thing_that_it's_questionable_if_it'll_even_work...
 ==========
-Leather Armor
+Leather_Armor
 8
-Armor (Chestpiece)
+Armor_(Chestpiece)
 2
 None
 0
-It's a little beat up, but it's better than nothing.
+It's_a_little_beat_up,_but_it's_better_than_nothing.
 ==========
-Steel Sword
+Steel_Sword
 8
 Weapon
 1
 None
 0
-A sword that's sharp and in decent shape, all things considered.
+A_sword_that's_sharp_and_in_decent_shape,_all_things_considered.
 ==========
-Basic Health Potion
+Basic_Health_Potion
 10
 Potion
 1
 None
 0
-Your standard health potion. Restores 10 HP.
+Your_standard_health_potion._Restores_10_HP.
