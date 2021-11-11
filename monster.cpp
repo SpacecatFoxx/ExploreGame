@@ -7,6 +7,18 @@
 
 using namespace std;
 
+Monster::Monster() {
+    isBoss = false;
+    monsterName = "N/A";
+    bossTitle = "N/A";
+    monsterType = "N/A";
+    monsterHP = 0;
+    monsterMaxHP = 0;
+    monsterAGI = 0;
+    monsterARM = 0;
+    monsterATK = 0;
+}
+
 void Monster::makeMonster(const string filename) {
   int monsters = 0;
   string data;
@@ -22,13 +34,15 @@ void Monster::makeMonster(const string filename) {
     isBoss = false;
   }
   fin >> monsterName;
-  getline(fin, bossTitle);
+  fin >> bossTitle;
   fin >> monsterType; //Problem child!! addStrings() won't work with getline()
   fin >> monsterMaxHP;
   monsterHP = monsterMaxHP;
   fin >> monsterAGI;
   fin >> monsterARM;
   fin >> monsterATK;
+  addSpace(bossTitle);
+  addSpace(monsterType);
   fin.close();
   fillDrops();
   return;
@@ -48,8 +62,6 @@ void Monster::fillDrops() {
   int statUp;
   string desc;
 
-  if (monsterFile == filename) {cout << "yay!" << endl;}
-  else {cout << "damn" << endl;}
   //If not boss, use monster type for drops, if boss use boss name
   if (!isBoss) {filename = "item/"+monsterType+".log";} 
   else {filename = "item/"+monsterName+".log";}
@@ -59,18 +71,16 @@ void Monster::fillDrops() {
     cout << "File not found!" << endl;
   }
   while (fin >> data) {
-    cout << data << endl;
-    fin.ignore();
-    getline(fin, name); cout << "Name: " << name << endl;
+    fin >> name;
     fin >> function;
-    fin.ignore();
-    getline(fin, type);
+    fin >> type;
     fin >> rarity;
-    fin.ignore();
-    getline(fin, special);
+    fin >> special;
     fin >> statUp;
-    fin.ignore();
-    getline(fin, desc);
+    fin >> desc;
+    addSpace(name);
+    addSpace(type);
+    addSpace(desc);
     monsterDrops[item].makeItem(name, function, type, rarity, special, statUp, desc);
     item++;
   }
@@ -89,6 +99,7 @@ void Monster::fullPrint() const {
   //For each drop, print the item
   for (int i = 0; i < 5; i++) {
     monsterDrops[i].printItem();
+    cout << endl;
   }
   return;
 }

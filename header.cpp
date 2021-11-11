@@ -20,3 +20,12 @@ string addStrings(const string s1, const string s2, const string s3) {
   result = ss.str();
   return result;
 }
+
+void addSpace(string & s1) {
+  for (int i = 0; i < s1.length(); i++) {
+    if (s1[i] == '_') {
+      s1[i] = ' ';
+    }
+  }
+  return;
+}

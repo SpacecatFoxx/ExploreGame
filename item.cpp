@@ -47,7 +47,7 @@ void Item::printItem() const {
   } else {
     cout << SP << itemSpecial << " +" << itemStatUp << endl;
   }
-  cout << itemDesc << endl;
+  cout << SP << itemDesc << endl;
   return;
 }
 
