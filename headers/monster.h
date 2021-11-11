@@ -8,7 +8,7 @@ using std::string;
 class Monster {
   public:
   /*========== Constructors ==========*/
-    Monster() {};
+    Monster();
 
   /*========== Functions ==========*/
     //Desc: Fills the monster info
